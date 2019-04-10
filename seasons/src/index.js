@@ -9,7 +9,7 @@ const App = () => {
     );
 
     return (
-        <div>Hello</div>
+        <div>Latitude: </div>
     );
 };
 
