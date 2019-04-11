@@ -3,20 +3,21 @@ import ReactDOM from 'react-dom';
 
 
 class App extends React.Component {
-    constructor(props) {
-        super(props);
-        this.state = {
-            lat: null
+        state = {
+            lat: null,
+            errorMessage: ''
         };
-        //function to determine location of user
-        window.navigator.geolocation.getCurrentPosition(
-            position => {
-                // call setState to update position with current location of user
-                this.setState({lat: position.coords.latitude});
-            }, 
+    
+
+    componentDidMount() {
+         //function to determine location of user
+         window.navigator.geolocation.getCurrentPosition(
+            position =>// call setState to update position with current location of user
+                this.setState({lat: position.coords.latitude}), 
             err => this.setState({ errorMessage: err.message })
         );
     }
+
 
 
     render() {
