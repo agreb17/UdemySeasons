@@ -6,7 +6,7 @@ import styled from "styled-components";
 
 
 const BorderRed = styled.div`
-    border: 10px solid red;
+    border: 20px solid red;
 `;
 
 
